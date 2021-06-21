@@ -1,0 +1,76 @@
+
+// css product-item
+@import "../helpers/function";
+@import "../helpers/mixin";
+@import "../helpers/theme";
+
+// product item in manage course
+.product-item-admin {
+    width: 155px;
+    background: #424242;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0px 5px;
+    border: 1px solid #fff;
+
+    .item-body {
+        position: relative;
+        padding-bottom: 27px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: 500;
+            padding: 5px;
+            text-align: center;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s linear;
+        }
+
+        &:hover::after {
+            background: #515151;
+            opacity: 0.5;
+        }
+    }
+
+    .item-footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 18px;
+        padding: 5px;
+        border-top: 1px solid #fff;
+
+        span {
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s linear;
+
+            &:hover {
+                background: #515151;
+            }
+        }
+    }
+}

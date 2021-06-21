@@ -1,0 +1,69 @@
+// CREATE THEME
+// colors background
+$bgColor: (
+  "bgPrimary": #fff,
+  "bgSecondary": #FBF4EC,
+  "bgGreen": #7FC6C1,
+  "bgGreenLight": #D7EDEC,
+  "bgBlack": #111111,
+  "bgOrange": #EF5740,
+  "bgGrayBlack": #424242,
+  "bgBlue": #0056B9
+);
+
+// colors text
+$textColor: (
+  "textPrimary": #373027,
+  "textSecondary": #AFAAA4,
+  "textOrange": #EF5740,
+  "textGreen": #7FC6C1,
+  "textWhite": #fff,
+  "textBlue": #0056B9
+);
+
+$btnColor: (
+  "btnWhite": #fff,
+  "btnOrange": #EF5740,
+  "btnGreen": #7FC6C1,
+  "btnBlack": #373027,
+  "btnSkin": #FBF4EC,
+);
+
+$borderColor: (
+  "borderPrimary": #373027,
+  "borderSecondary": #C2C4C5,
+  "borderGreen": #7FC6C1
+);
+
+// font size
+$fontSize: (
+  "body1": 1.2rem,
+  "body2": 1.4rem,
+  "subtitle": 1.5rem,
+  "h6": 1.6rem,
+  "h5": 1.8rem,
+  "h4": 2.5rem,
+  "h3": 2.8rem,
+  "h2": 3.2rem,
+  "h1": 4.2rem,
+);
+
+//fonts weight
+$fontWeight: (
+  "fwBlack": 900,
+  "fwBold": 700,
+  "fwMedium": 600,
+  "fwRegular": 500,
+  "fwExtraLight": 400,
+  "fwLight": 300,
+);
+
+//spacing
+$spacing: 10px;
+
+$breakPoint: (
+  "extraLarge": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);

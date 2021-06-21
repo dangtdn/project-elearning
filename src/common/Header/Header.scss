@@ -1,0 +1,109 @@
+@import "../../../src/styles/helpers/function";
+@import "../../../src/styles/helpers/mixin";
+@import "../../../src/styles/helpers/theme";
+@import "../../../src/styles/base/reset";
+@import "../../../src/styles/components/button";
+@import "../../../src/styles/components/shadow";
+
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: c("bgSecondary");
+    border-bottom: 1px solid tc('textSecondary');
+    z-index: 20;
+
+    .header-contain {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0px;
+
+        
+        a {
+            @include text(fs("body2"), tc("textPrimary"), fw("fwMedium"), 0);
+            text-decoration: none;
+            position: relative;
+        }
+
+        a.a-teacher {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: fs("h4");
+            background: linear-gradient(
+                to right, 
+                tc("textOrange"), tc("textGreen")
+            );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            img {
+                width: 60px;
+                max-width: 100%;
+            }
+        }
+        .menu {
+            .menu-list {
+                list-style: none;
+                margin-bottom: 0;
+                a {
+                    display: block;
+                    padding: 20px 15px;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: 15px;
+                        left: 15px;
+                        width: 0;
+                        height: 2px;
+                        transition: all 0.4s ease;
+                        background: c("bgBlack");
+                    }
+            
+                    &:hover::after {
+                        width: 30%;
+                    }
+                }
+
+                a.active {
+                    &::after {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.header.active {
+    background: c("bgSecondary");
+}
+
+.header.my-shadow {
+    transition: all 0.4s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        .menu {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background: c("bgSecondary");
+            width: 100%;
+
+            .menu-list {
+                justify-content: center;
+            }
+        }
+
+        .header-contain {
+            justify-content: center;
+        }
+    }
+}
